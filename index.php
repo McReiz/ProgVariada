@@ -5,6 +5,39 @@
 <link href="stylesheets/style.css" type="text/css" rel="stylesheet">
 <link rel="stylesheet" href="stylesheets/default/default.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="stylesheets/nivo-slider.css" type="text/css" media="screen" />
+<link type='text/css' href='stylesheets/osx.css' rel='stylesheet' media='screen' />
+<script >
+	function comprobarPOST() {
+
+		var verificar=true;
+
+		if(!document.getElementById("usuario").value) {
+			alert("El usuario es requerido");
+			document.getElementById("usuario").focus();
+			verificar=false		
+		}	else if (!document.getElementById("nombre").value) {
+			alert("El nombre es requerido");
+			document.getElementById("nombre").focus();
+			verificar=false		
+		}	else if (!document.getElementById("password").value) {
+			alert("La contrase&ntilde;a es requerida");
+			document.getElementById("password").focus();
+			verificar=false		
+		} 	else if (!document.registrate.sexo_rdo[0].checked && !document.registrate.sexo_rdo[1].checked) {
+			alert("El campo sexo es requerido");
+			document.registrate.sexo_rdo[0].focus();
+			verificar = false
+		}
+		if (verificar) {
+			document.registrate.submit();
+		}
+	}	
+
+	window.onload = function() {
+		document.getElementById("registrarse").onclick = comprobarPOST;
+
+	}
+</script>
 </head>
 <body>
 <!-- header -->
@@ -24,10 +57,34 @@
 			<div id="boton">
 				<input name="entrar" type="submit" value="Entrar" />
 			</div>
-			<div id="reg"><a href="register.php">Registrarse!</a></div>
+			<div id="reg"><a href="register.php" class='osx'>Registrarse!</a></div>
 		</form>
 	</div>
 </header>
+<!-- modal register -->
+<div id="osx-modal-content">
+	<div id="osx-modal-title">Registrarse!</div>
+	<div class="close"><a href="#" class="simplemodal-close">x</a></div>
+	<div id="osx-modal-data">
+		<form name="registrate" action="" method="post" enctype="application/x-www-form-urlencoded">
+			<span>Usuario: <input type="text" name="usuario_txt" id="usuario" placeholder="usuario"/></span>
+			<br/><br/>
+			<span>Nombre: <input type="text" name="nombre_txt" id="nombre" placeholder="nombre"/></span>
+			<br/><br/>
+			<span>Contrase&ntilde;a <input type="password" name="password_txt" id="password" placeholder="Contraseña"/></span>
+			<br/><br/>
+			<span>Sexo
+			<input type="radio" name="sexo_rdo" value="m"/>
+			Masculino&nbsp;
+			<input type="radio" name="sexo_rdo" value="f"/>
+			Femenino
+			</span>
+			<br/><br/>
+			<input type="hidden" name="registrarse_hdn" value="post"/>
+			<input type="button" id="registrarse" name="registrarse_btn" value="Registrarse"/>
+		</form>
+	</div>
+</div>
 <!-- navegador o menu -->
 <nav>
 	<ul>
@@ -102,6 +159,9 @@
 		</menu>
 	</div>
 </footer>
+<!-- Load JavaScript files -->
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='js/osx.js'></script>
 </body>
 </html>
 	
