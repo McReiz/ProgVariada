@@ -9,6 +9,7 @@ $gris: #dfdfdf;
 
 body{
 	background:$blanco;
+	background: url(../images/background.jpg);
 	text-align: center;
 	font-family: 'Orienta', sans-serif;
 }
@@ -161,6 +162,10 @@ article{
 	}
 	#terceros{
 		margin-bottom: 10px;
+	}
+	#registrate{
+		margin-top: 15px;
+		margin-bottom: 15px;
 	}
 }
 footer{

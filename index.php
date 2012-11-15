@@ -24,7 +24,7 @@
 			<div id="boton">
 				<input name="entrar" type="submit" value="Entrar" />
 			</div>
-			<div id="reg"><a href="#">Registrarse!</a></div>
+			<div id="reg"><a href="register.php">Registrarse!</a></div>
 		</form>
 	</div>
 </header>
