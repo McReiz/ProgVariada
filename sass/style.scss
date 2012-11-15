@@ -121,3 +121,102 @@ nav{
 		}
 	}
 }
+.slider{
+	width: 90%;
+	max-width: 1024px;
+	display: inline-block;
+	margin:{
+		top:10px;
+		bottom: 10px;
+	}
+}
+article{
+	width: 90%;
+	max-width: 1024px;
+	display: inline-block;
+	
+	h2{
+		background:$azul-claro;
+		padding: 5px;
+		color: white;
+		margin-bottom: 6px;
+		box-shadow: 0 5px 8px rgba(7,79,78,.5);
+	}
+	#content{
+		background: $gris;
+		font-size: 13.5px;
+		box-shadow: 0 5px 8px rgba(0,0,0,.3);
+		padding: 5px;
+		text-align: justify;
+	}
+	#principar{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	#secundario{
+		width: 49.5%;
+		display: inline-block;
+		vertical-align:top;
+		margin-bottom: 10px;
+	}
+	#terceros{
+		margin-bottom: 10px;
+	}
+}
+footer{
+	background: linear-gradient($azul-2 10%,$azul);
+	background: -o-linear-gradient($azul-2 10%,$azul);
+	background: -ms-linear-gradient($azul-2 10%,$azul);
+	background: -moz-linear-gradient($azul-2 10%,$azul);
+	background: -webkit-linear-gradient($azul-2 10%,$azul);
+	width: 100%;
+	padding-bottom: 5px;
+	
+	#copy{
+		display:inline-block;
+		width:90%;
+		max-width:1024px;
+		text-align:left;
+		
+		#dere{
+			margin: 10px 0 5px;
+			font-weight: bold;
+			color: white;
+			text-align: center;
+			font-size: 13px;
+			
+			a{
+				color: white;
+			}
+		}
+		menu{
+			text-align: center;
+			margin: 5px 0 0 0;
+			width: 32.33%;
+			list-style: none;
+			display: inline-block;
+			
+			h4{
+				color: white;
+				font-weight: bold;
+				margin-bottom: 5px;
+			}
+			li{
+				a{
+					display: block;
+					margin-bottom: 3px;
+					font-weight:bold;
+					box-shadow:inset 0px 0px 5px 2px rgba(0,0,0,.1);
+					color: rgba(0,0,0,.5);
+					text-decoration:none;
+					padding: 5px;
+					background: rgba(255,255,255,.2);
+					-webkit-transition: all .5s;
+				}
+				a:hover{
+					box-shadow:inset 0px 0px 8px 1px rgba(0,0,0,.4);
+				}
+			}
+		}
+	}
+}
